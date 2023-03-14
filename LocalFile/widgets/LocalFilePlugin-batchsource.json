@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "spec-version": "1.5"
+  },
+  "configuration-groups": [
+    {
+      "label": "Basic Properties",
+      "properties": [
+        {
+          "widget-type": "textbox",
+          "label": "Reference Name",
+          "name": "referenceName",
+          "widget-attributes": {
+            "placeholder": "Enter the reference name."
+          }
+        },
+        {
+          "label": "Path",
+          "name": "filePath",
+          "widget-type": "text-box",
+          "placeholder": "/path/to/input"
+        },
+        {
+          "label": "Format",
+          "name": "format",
+          "widget-type": "select",
+          "widget-attributes": {
+            "values": [
+              "csv",
+              "tsv"
+            ],
+            "key-placeholder": "choose format"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Advanced Properties",
+      "properties": [
+        {
+          "label": "Include Headers",
+          "name": "headers",
+          "widget-type": "toggle",
+          "widget-attributes": {
+            "on": {
+              "value": "true",
+              "label": "Yes"
+            },
+            "off": {
+              "value": "false",
+              "label": "No"
+            },
+            "default": "false"
+          }
+        },
+        {
+          "widget-type": "radio-group",
+          "label": "Allow empty values",
+          "name": "emptyInput",
+          "widget-attributes": {
+            "layout": "inline",
+            "default": "True",
+            "options": [
+              {
+                "id": "True",
+                "label": "True"
+              },
+              {
+                "id": "False",
+                "label": "False"
+              }
+            ]
+          }
+        },
+        {
+          "label":"Delimiter",
+          "name": "delimiter",
+          "widget-type": "select",
+          "widget-attributes": {
+            "default": ",",
+            "values": [
+              ",",
+              ";",
+              ":",
+              ".",
+              "|"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+
+  "outputs": [
+    {
+      "label": "Schema",
+      "name": "schema",
+      "widget-type": "schema"
+    }
+  ]
+}
+
